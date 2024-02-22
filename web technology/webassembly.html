@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NodeJS with Webassembly</title>
+  </head>
+  <body>
+    <p>
+      WebAssembly is a high-performance assembly-like language that can be
+      compiled from various languages, including C/C++, Rust, and
+      AssemblyScript. Currently, it is supported by Chrome, Firefox, Safari,
+      Edge, and Node.js!
+    </p>
+
+    <p>
+      The WebAssembly specification details two file formats, a binary format
+      called a WebAssembly Module with a .wasm extension and corresponding text
+      representation called WebAssembly Text format with a .wat extension.
+    </p>
+
+    <p>Key Concepts</p>
+    <p>Module - A compiled WebAssembly binary, ie a .wasm file.</p>
+    <p>Memory - A resizable ArrayBuffer.</p>
+    <p>Table - A resizable typed array of references not stored in Memory.</p>
+    <p>
+      Instance - An instantiation of a Module with its Memory, Table, and
+      variables.
+    </p>
+    <p>
+      In order to use WebAssembly, you need a .wasm binary file and a set of
+      APIs to communicate with WebAssembly. Node.js provides the necessary APIs
+      via the global WebAssembly object.
+    </p>
+  </body>
+</html>

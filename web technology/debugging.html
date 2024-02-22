@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging NodeJS</title>
+    <h1>Debugging NodeJS</h1>
+  </head>
+  <body>
+    <p>Enable Inspector</p>
+    <p>
+      When started with the --inspect switch, a Node.js process listens for a
+      debugging client. By default, it will listen at host and port
+      127.0.0.1:9229. Each process is also assigned a unique UUID.
+    </p>
+
+    <p>
+      Inspector clients must know and specify host address, port, and UUID to
+      connect. A full URL will look something like
+      ws://127.0.0.1:9229/0f2c936f-b1cd-4ac9-aab3-f63b0f33d55e.
+    </p>
+
+    <p>
+      Node.js will also start listening for debugging messages if it receives a
+      SIGUSR1 signal. (SIGUSR1 is not available on Windows.) In Node.js 7 and
+      earlier, this activates the legacy Debugger API. In Node.js 8 and later,
+      it will activate the Inspector API.
+    </p>
+
+    <p>Security Implications</p>
+    <p>
+      Since the debugger has full access to the Node.js execution environment, a
+      malicious actor able to connect to this port may be able to execute
+      arbitrary code on behalf of the Node.js process. It is important to
+      understand the security implications of exposing the debugger port on
+      public and private networks.
+    </p>
+
+    <p>Exposing the debug port publicly is unsafe</p>
+    <p>
+      If the debugger is bound to a public IP address, or to 0.0.0.0, any
+      clients that can reach your IP address will be able to connect to the
+      debugger without any restriction and will be able to run arbitrary code.
+    </p>
+
+    <p>
+      By default node --inspect binds to 127.0.0.1. You explicitly need to
+      provide a public IP address or 0.0.0.0, etc., if you intend to allow
+      external connections to the debugger. Doing so may expose you to a
+      potentially significant security threat. We suggest you ensure appropriate
+      firewalls and access controls in place to prevent a security exposure.
+    </p>
+
+    <p>
+      See the section on 'Enabling remote debugging scenarios' on some advice on
+      how to safely allow remote debugger clients to connect.
+    </p>
+
+    <p>Local applications have full access to the inspector</p>
+    <p>
+      if you bind the inspector port to 127.0.0.1 (the default), any
+      applications running locally on your machine will have unrestricted
+      access. This is by design to allow local debuggers to be able to attach
+      conveniently.
+    </p>
+
+    <p>Browsers, WebSockets and same-origin policy</p>
+    <p>
+      Websites open in a web-browser can make WebSocket and HTTP requests under
+      the browser security model. An initial HTTP connection is necessary to
+      obtain a unique debugger session id. The same-origin-policy prevents
+      websites from being able to make this HTTP connection. For additional
+      security against DNS rebinding attacks, Node.js verifies that the 'Host'
+      headers for the connection either specify an IP address or localhost
+      precisely.
+    </p>
+
+    <p>
+      These security policies disallow connecting to a remote debug server by
+      specifying the hostname. You can work-around this restriction by
+      specifying either the IP address or by using ssh tunnels as described
+      below.
+    </p>
+  </body>
+</html>
