@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamically Create and Delete DOM Elements</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+
+    <button onclick="createBox()">Create Box</button>
+    <button onclick="deleteBox()">Delete Box</button>
+
+    <script>
+      function createBox() {
+        var container = document.getElementById("container");
+        var newBox = document.createElement("div");
+        newBox.className = "box";
+        newBox.textContent = "New Box";
+        container.appendChild(newBox);
+      }
+
+      function deleteBox() {
+        var container = document.getElementById("container");
+        var boxes = container.getElementsByClassName("box");
+        if (boxes.length > 0) {
+          container.removeChild(boxes[boxes.length - 1]);
+        }
+      }
+    </script>
+  </body>
+</html>

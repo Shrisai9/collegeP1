@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    <title>Flower Management System</title>
+    <!-- Include JavaScript -->
+    <script src="flower-management.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Bloom Ease</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="transactions.html">ORDER</a></li>
+          <li><a href="static.html">GRATITUDE</a></li>
+          <li><a href="about_us.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="featured-flowers">
+        <div class="flower-card">
+          <img src="sunflower-1627193_1280.jpg" alt="Sunflower" />
+          <h3>Sunflower</h3>
+          <p>Price: 15rs</p>
+        </div>
+        <div class="flower-card">
+          <img src="tulips-2254970_1280.jpg" alt="Tulips" />
+          <h3>Tulips</h3>
+          <p>Price: 12rs</p>
+        </div>
+        <div class="flower-card">
+          <img src="marguerite-729510_1280.jpg" alt="Daisy" />
+          <h3>Daisy</h3>
+          <p>Price: 10rs</p>
+        </div>
+        <div class="flower-card">
+          <img src="flower-729514_1280.jpg" alt="Lily" />
+          <h3>Lily</h3>
+          <p>Price: 15rs</p>
+        </div>
+        <div class="flower-card">
+          <img src="flower-3097458_1280.jpg" alt="Orchid" />
+          <h3>Orchid</h3>
+          <p>Price: 20rs</p>
+        </div>
+        <div class="flower-card">
+          <img src="rose-320868_1280.jpg" alt="Rose" />
+          <h3>Rose</h3>
+          <p>Price: 10rs</p>
+        </div>
+      </section>
+
+      <div class="feature-section">
+        <h2>Attractive and Modern Design</h2>
+        <p>
+          Our flower management system is designed with modern and attractive
+          features. With a user-friendly interface, you can easily manage and
+          order your favorite flowers.
+        </p>
+        <button class="cta"><a href="login.html">Order Now</a></button>
+      </div>
+    </main>
+
+    <!-- Modal for flower details -->
+    <div id="flowerModal">
+      <div id="modalContent">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p id="modalText"></p>
+      </div>
+    </div>
+  </body>
+</html>

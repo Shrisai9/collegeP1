@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="transactons.css" />
+    <title>Order Flowers</title>
+  </head>
+  <body>
+    <header>
+      <h1>Order Flowers</h1>
+      <nav>
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="login.html">LOGIN</a></li>
+          <li><a href="static.html">GRATITUDE</a></li>
+          <li><a href="about_us.html">ABOUT US</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="thnx.html" method="next">
+        <fieldset>
+          <legend>Choose your flowers:</legend>
+          <input type="checkbox" name="flowers[]" value="Sunflower" />
+          <label for="Sunflower">Sunflower 10rs</label> <br />
+          <input type="checkbox" name="flowers[]" value="Tulips" />
+          <label for="Tulips">Tulips 12rs</label> <br />
+          <input type="checkbox" name="flowers[]" value="Daisy" />
+          <label for="Daisy">Daisy 10rs</label> <br />
+          <input type="checkbox" name="flowers[]" value="Lily" />
+          <label for="Lily">Lily 15rs</label> <br />
+          <input type="checkbox" name="flowers[]" value="Orchid" />
+          <label for="Orchid">Orchid 20rs</label> <br />
+          <input type="checkbox" name="flowers[]" value="Rose" />
+          <label for="Rose">Rose 10rs</label> <br />
+        </fieldset>
+        <fieldset>
+          <legend>Choose your delivery method:</legend>
+          <input type="radio" name="delivery" value="Pickup" />
+          <label for="Pickup">Pickup at our store</label> <br />
+          <input type="radio" name="delivery" value="Delivery" />
+          <label for="Delivery">Delivery to your address</label> <br />
+          <label for="address">Address:</label>
+          <input type="text" name="address" id="address" /> <br />
+        </fieldset>
+        <script src="transactions.js"></script>
+        <button type="submit" class="cta">Place Order</button>
+      </form>
+    </main>
+  </body>
+</html>

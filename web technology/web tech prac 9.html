@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Operations</title>
+  </head>
+  <body>
+    <h2>Arithmetic Operations</h2>
+    <p>Enter two numbers and select an operation:</p>
+    <input type="text" id="num1" placeholder="Enter the first number" />
+    <input type="text" id="num2" placeholder="Enter the second number" />
+    <select id="operation">
+      <option value="addition">Addition (+)</option>
+      <option value="subtraction">Subtraction (-)</option>
+      <option value="multiplication">Multiplication (*)</option>
+      <option value="division">Division (/)</option>
+      <option value="modulus">Modulus (%)</option>
+      <option value="increment">Increment (++)</option>
+      <option value="decrement">Decrement (--)</option>
+      <option value="unaryPlus">Unary Plus (unary+)</option>
+      <option value="unaryMinus">Unary Minus (unary-)</option>
+    </select>
+    <button onclick="performOperation()">Calculate</button>
+    <p id="result"></p>
+
+    <script>
+      // Function to perform arithmetic operations based on user input
+      function performOperation() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let operation = document.getElementById("operation").value;
+        let result;
+
+        switch (operation) {
+          case "addition":
+            result = num1 + num2;
+            break;
+          case "subtraction":
+            result = num1 - num2;
+            break;
+          case "multiplication":
+            result = num1 * num2;
+            break;
+          case "division":
+            result = num1 / num2;
+            break;
+          case "modulus":
+            result = num1 % num2;
+            break;
+          case "increment":
+            result = ++num1;
+            break;
+          case "decrement":
+            result = --num1;
+            break;
+          case "unaryPlus":
+            result = +num1;
+            break;
+          case "unaryMinus":
+            result = -num1;
+            break;
+          default:
+            result = "Invalid operation";
+        }
+
+        document.getElementById("result").innerHTML = "Result: " + result;
+      }
+    </script>
+  </body>
+</html>

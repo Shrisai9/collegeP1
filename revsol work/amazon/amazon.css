@@ -1,0 +1,153 @@
+/* Basic reset */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+  background-color: #232f3e; /* Amazon's typical color */
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  background-color: #f3f3f3;
+  width: 50%;
+
+  margin: 0%;
+}
+
+.search-form input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  height: 40px;
+  border: 10px;
+  border-radius: 5px;
+}
+
+.search-form button {
+  background-color: rgb(235, 189, 37);
+  border: none;
+  height: 50px;
+  width: 10%;
+  color: #333;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.logo {
+  margin: 0 auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+.header-info {
+  padding: 3px;
+  text-align: center;
+}
+
+/* Navigation menu styling */
+nav {
+  background-color: #232f3e; /* Consistent with your original CSS */
+  padding: 10px;
+  height: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  justify-content: flex-end; /* Aligns all items to the right */
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold; /* Consistent with your CSS */
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Control circle size */
+  height: 30px;
+  border-radius: 50%; /* Makes it a circle */
+  background-color: #3c3c3c; /* Dark circle background */
+  color: white; /* White icon color for contrast */
+}
+
+a:hover {
+  color: #2f76b8;
+}
+
+/* Aligns items on the right in the navbar */
+nav ul li.right {
+  margin-left: auto; /* Pushes subsequent items to the right */
+}
+/* Main content styling */
+main {
+  padding: 10px;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.product {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+button.add {
+  background-color: #4292e9; /* blue color */
+  color: #ffffff; /* white text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.add:hover {
+  background-color: #ca941f; /* darker blue color on hover */
+}
+
+.product img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Footer styling */
+footer {
+  background-color: #232f3e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

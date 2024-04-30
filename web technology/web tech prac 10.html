@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic DOM Manipulation</title>
+    <style>
+      .item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="itemsContainer">
+      <div class="item">
+        Item 1 <button onclick="modifyItem(1)">Modify</button>
+        <button onclick="deleteItem(1)">Delete</button>
+      </div>
+      <div class="item">
+        Item 2 <button onclick="modifyItem(2)">Modify</button>
+        <button onclick="deleteItem(2)">Delete</button>
+      </div>
+    </div>
+
+    <button onclick="addItem()">Add Item</button>
+
+    <script>
+      function addItem() {
+        var itemsContainer = document.getElementById("itemsContainer");
+        var newItem = document.createElement("div");
+        newItem.className = "item";
+        newItem.textContent = "New Item";
+        var modifyButton = document.createElement("button");
+        modifyButton.textContent = "Modify";
+        modifyButton.onclick = function () {
+          modifyItem(itemsContainer.children.length + 1);
+        };
+        var deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+        deleteButton.onclick = function () {
+          deleteItem(itemsContainer.children.length + 1);
+        };
+        newItem.appendChild(modifyButton);
+        newItem.appendChild(deleteButton);
+        itemsContainer.appendChild(newItem);
+      }
+
+      function modifyItem(index) {
+        var itemsContainer = document.getElementById("itemsContainer");
+        var item = itemsContainer.children[index - 1];
+        item.textContent = "Modified Item " + index;
+      }
+
+      function deleteItem(index) {
+        var itemsContainer = document.getElementById("itemsContainer");
+        if (index > 0 && index <= itemsContainer.children.length) {
+          itemsContainer.removeChild(itemsContainer.children[index - 1]);
+        }
+      }
+    </script>
+  </body>
+</html>

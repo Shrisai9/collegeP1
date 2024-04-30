@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <form action="next">
+      <img src="tuiton.png" alt="tuition" />
+      <h1>Registration Form</h1>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" /><br />
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" /><br />
+      <label for="Subject">Subject you want to choose</label>
+      <select name="Subject" id="Subject">
+        <option value="maths">maths</option>
+        <option value="science">Science</option>
+        <option value="English">English</option>
+        <option value="all">All 3</option></select
+      ><br />
+      <label for="Study">What is your current level of study?</label>
+      <select name="school" id="school">
+        <option value="Primary">Primary School</option>
+        <option value="Secondary">Secondary School</option>
+        <option value="University">University</option></select
+      ><br />
+      <label for="learning-needs"
+        >Do you have any specific learning needs or requirements?</label
+      ><br />
+      <textarea
+        name="learning-needs"
+        id="learning-needs"
+        rows="4"
+        cols="50"
+      ></textarea
+      ><br />
+      <label for="frequency"
+        >How often would you like tuition sessions to take place?</label
+      ><br />
+      <input type="checkbox" name="frequency" id="weekly" value="weekly" />
+      <label for="weekly">Weekly</label><br />
+      <input type="checkbox" name="frequency" id="biweekly" value="biweekly" />
+      <label for="biweekly">Bi-weekly</label><br />
+      <input type="checkbox" name="frequency" id="monthly" value="monthly" />
+      <label for="monthly">Monthly</label><br />
+      <label for="duration"
+        >How long would you like each tuition session to last?</label
+      ><br />
+      <input type="checkbox" name="duration" id="30min" value="30min" />
+      <label for="30min">30 minutes</label><br />
+      <input type="checkbox" name="duration" id="60min" value="60min" />
+      <label for="60min">60 minutes</label><br />
+      <input type="checkbox" name="duration" id="90min" value="90min" />
+      <label for="90min">90 minutes</label><br />
+      <label for="preference"
+        >Would you prefer online or in-person tuition sessions?</label
+      ><br />
+      <input type="radio" name="preference" id="online" value="online" />
+      <label for="online">Online</label><br />
+      <input type="radio" name="preference" id="in-person" value="in-person" />
+      <label for="in-person">In-person</label><br />
+      <label for="availability"
+        >What is your availability for tuition sessions?</label
+      ><br />
+      <textarea
+        name="availability"
+        id="availability"
+        rows="4"
+        cols="50"
+      ></textarea
+      ><br />
+      <label for="experience"
+        >Do you have any previous experience with tuition or private
+        tutors?</label
+      ><br />
+      <textarea name="experience" id="experience" rows="4" cols="50"></textarea
+      ><br />
+      <label for="referral">How did you hear about our tuition service?</label
+      ><br />
+      <input type="checkbox" name="referral" id="website" value="website" />
+      <label for="website">Website</label><br />
+      <input
+        type="checkbox"
+        name="referral"
+        id="social-media"
+        value="social-media"
+      />
+      <label for="social-media">Social Media</label><br />
+      <input type="checkbox" name="referral" id="friend" value="friend" />
+      <label for="friend">Friend</label><br />
+      <input type="checkbox" name="referral" id="other" value="other" />
+      <label for="other">Other</label><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
