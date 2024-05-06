@@ -72,7 +72,6 @@ nav {
 }
 
 nav ul {
-  color: white;
   list-style: none;
   padding: 0px;
   display: flex;
@@ -84,10 +83,6 @@ nav a {
   padding: 10px;
   text-decoration: none;
   font-weight: bold; /* Consistent with your CSS */
-}
-
-.icon{
-  color: white;
 }
 
 .icon-circle {
@@ -149,10 +144,41 @@ button.add:hover {
   object-fit: contain;
 }
 
-/* Footer styling */
-footer {
-  background-color: #232f3e;
-  color: white;
-  text-align: center;
+/* Cart page styling */
+.cart-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cart-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
   padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.cart-item button.remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4292e9;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cart-item button.remove:hover {
+  background-color: #ca941f;
+}
+
+.cart-total {
+  margin-top: 20px;
+  text-align: right;
 }
