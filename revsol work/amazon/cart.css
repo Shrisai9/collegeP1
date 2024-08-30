@@ -43,9 +43,18 @@ header {
   border: none;
   height: 50px;
   width: 10%;
-  color: #333;
+  color: #f5f3f3;
   padding: 5px;
   cursor: pointer;
+}
+
+.image {   
+  height: 20px;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 
 .logo {
@@ -96,14 +105,70 @@ nav a {
   color: white; /* White icon color for contrast */
 }
 
-a:hover {
-  color: #2f76b8;
+nav a:hover {
+  border: 1px solid white;
 }
 
 /* Aligns items on the right in the navbar */
 nav ul li.right {
   margin-left: auto; /* Pushes subsequent items to the right */
 }
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-btn {
+  
+  background-color: #3c3c3c;
+  color: #fff;
+
+}
+
+.dropdown-btn:hover {
+  background-color: #0069d9;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
+}
+
+@keyframes growDown{
+  0% {
+    transform: scaleY(0);
+    }
+  80%{
+    transform: scaleY(1.1);
+  }
+  100% {
+      transform: scaleY(1);
+    }
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  transition: display 0.5s ease;
+}
+
 /* Main content styling */
 main {
   padding: 10px;
@@ -181,4 +246,58 @@ button.add:hover {
 .cart-total {
   margin-top: 20px;
   text-align: right;
+}
+
+
+footer {
+  background-color: #232f3e;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-content {
+  width: calc(100% / 5);
+  margin-bottom: 20px;
+}
+
+
+.footer-content p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content li {
+  margin-bottom: 5px;
+  color: white;
+}
+
+.footer-content a {
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
+.footer-content a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-content i {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.footer-content i:hover{
+  color: white;
+  text-decoration: underline;
 }

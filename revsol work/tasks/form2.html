@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Additional Information</title>
+    <link rel="stylesheet" type="text/css" href="Task1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Additional Information</h1>
+      <form>
+        <label for="weight">Weight (Kg):</label><br />
+        <input type="number" id="weight" name="weight" min="1" max="500" /><br />
+        <label for="height">Height (CM)</label><br />
+        <input type="number" id="height" name="height" min="1" max="300" /><br />
+        <label for="job-activity">What's the activity level at your job?</label><br />
+        <select id="job-activity" name="job-activity">
+          <option value="none">None (seated only)</option>
+          <option value="moderate">Moderate (light activity such as walking)</option>
+          <option value="high">High (heavy labor, very active)</option>
+        </select><br />
+        <label for="occupation">What do you do for a living?</label><br />
+        <input type="text" id="occupation" name="occupation" /><br />
+        <label for="work-schedule">Do you follow a regular working schedule, do you work days, afternoon or nights?</label><br />
+        <input type="text" id="work-schedule" name="work-schedule" /><br />
+        <label for="travel-frequency">How often do you travel?</label><br />
+        <select id="travel-frequency" name="travel-frequency">
+          <option value="rarely">Rarely</option>
+          <option value="a-few-times-a-year">A few times a year</option>
+          <option value="a-few-times-a-month">A few times a month</option>
+          <option value="every-month">Every month</option>
+          <option value="every-week">Every week</option>
+          <option value="every-day">Every day</option>
+        </select><br />
+        <label for="health-concerns">Are there any health concerns or limitations you have?</label><br />
+        <textarea id="health-concerns" name="health-concerns"></textarea><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -10,10 +10,15 @@
     />
 
     <link rel="stylesheet" type="text/css" href="amazon.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
   </head>
   <body>
+    <script src="cart.js"></script>
     <header>
-      <img src="amazon-removebg-preview.png" alt="Amazon_logo.svg.png" />
+      <div class="image">
+      <img src="amazon1.png" length="179" width="180" style="display: flex;" alt="Amazon_logo.svg.png" />
+      </div>
       <form class="search-form">
   <input type="text" name="q" placeholder="Search Amazon.in">
   <button type="submit"><i class="fas fa-search"></i></button>
@@ -23,13 +28,21 @@
         <ul>
           <!-- Right-aligned tabs -->
           <li><a href="Amazon.html">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Contact</a></li>
+          <div class="dropdown">
+            <a href="#" class="dropdown-link">Products <i class="fas fa-angle-down" style ="font-size:15px ;"></i></a>
+            <div class="dropdown-content">
+              <a href="#">Shoes</a>
+              <a href="#">Shirts</a>
+              <a href="#">Pants</a>
+              <a href="#">Accessories</a>
+            </div>
+          </div>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="#">About</a></li>
 
           <!-- Login/Register with icons -->
           <li class="icon">
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
           </li>
           <li class="icon">
             <a href="login.html"><i class="fas fa-user"></i></a>
@@ -39,42 +52,60 @@
     </header>
 
     <main>
-      <h2>Cart</h2>
-      <div class="cart-grid">
-        <!-- Cart Items -->
-        <div class="cart-item" data-product="Car" data-price="19.99" data-quantity="1">
-          <img src="car 1.png" alt="Product 1" width="200" height="200" />
-          <h3>CAR</h3>
-          <p>$19.99</p>
-          <br />
-          <button class="remove" onclick="removeItemFromCart({ product: 'Car', price: 19.99 });">Remove</button>
-        </div>
-        <div class="cart-item" data-product="Toy" data-price="29.99" data-quantity="2">
-          <img src="toy 2.png" alt="Product 2" width="200" height="200" />
-          <h3>TOY</h3>
-          <p>$29.99</p>
-          <br />
-          <button class="remove" onclick="removeItemFromCart({ product: 'Toy', price: 29.99 });">Remove</button>
-        </div>
-        <!-- More cart items... -->
-      </div>
-      <div class="cart-total">
-        <p>Total: $<span id="total">49.98</span></p>
-      </div>
+      <div id="cart">
+        <h3>Cart Items</h3>
+        <ul id="cartItems"></ul>
+      </div>      
     </main>
 
     <footer>
-      <p>© 2024 Amazon Clone. All rights reserved.</p><br>
-      <p><b>Connect us with</b></p>
-      <p>Instagram <i class="fab fa-instagram"></i></p>
-      <p>twitter <i class="fab fa-twitter"></i></p>
-      <p>facebook <i class="fab fa-facebook"></i></p>
-      <p>youtube <i class="fab fa-youtube"></i></p><br>
-      <p><address>Conditions of Use & Sale
-Privacy Notice
-Interest-Based Ads
-© 1996-2024, Amazon.com, Inc. or its affiliates</address></p>
-    </footer>
-    <script src="cart.js"></script>
+
+      <div class="footer-content">
+          <p>Get to Know Us</p>
+          <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press Releases</a></li>
+              <li><a href="#">Amazon Science</a></li>
+          </ul>
+      </div>
+      <div class="footer-content">
+          <p>Make Money with Us</p>
+          <ul>
+              <li><a href="#">Sell on Amazon</a></li>
+              <li><a href="#">Sell under Amazon Accelerator</a></li>
+              <li><a href="#">Protect and Build Your Brand</a></li>
+              <li><a href="#">Amazon Global Selling</a></li>
+              <li><a href="#">Become an Affiliate</a></li>
+          </ul>
+      </div>
+      <div class="footer-content">
+          <p>Amazon Payment Products</p>
+          <ul>
+              <li><a href="#">Fulfilment by Amazon</a></li>
+              <li><a href="#">Advertise Your Products</a></li>
+              <li><a href="#">Amazon Pay on Merchants</a></li>
+          </ul>
+      </div>
+      <div class="footer-content">
+          <p>Let Us Help You</p>
+          <ul>
+              <li><a href="#">COVID-19 and Amazon</a></li>
+              <li><a href="#">Your Account</a></li>
+              <li><a href="#">Returns Centre</a></li>
+              <li><a href="#">100% Purchase Protection</a></li>
+              <li><a href="#">Amazon App Download</a></li>
+              <li><a href="#">Help</a></li>
+          </ul>
+      </div>
+      <div class="footer-content">
+          <p>Connect With Us</p>
+          <ul>
+              <li><a href="#">Facebook <i class="fab fa-facebook"></i> </a></li>
+              <li><a href="#">Instagram <i class="fab fa-instagram"></i></a></li>
+              <li><a href="#">twitter <i class="fab fa-twitter"></i></a></li>
+          </ul>
+      </div>
+  </footer>
   </body>
 </html>

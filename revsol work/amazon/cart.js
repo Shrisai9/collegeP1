@@ -5,15 +5,19 @@ const cartIcon = document.querySelector('.fa-shopping-cart');
 const totalSpan = document.getElementById('total');
 
 // Function to add an item to the cart
-function addItemToCart(productData) {
+function addItemToCart(button) {
+  const productData = button.parentElement.dataset.product.split(',');
+  const product = productData[0];
+  const price = parseFloat(productData[1]);
+
   // Check if the item is already in the cart
-  const existingItem = cartItems.find((item) => item.product === productData.product);
+  const existingItem = cartItems.find((item) => item.product === product);
   if (existingItem) {
     // If the item is already in the cart, increment its quantity
     existingItem.quantity++;
   } else {
     // If the item is not in the cart, add it with a quantity of 1
-    cartItems.push({ product: productData.product, price: productData.price, quantity: 1 });
+    cartItems.push({ product, price, quantity: 1 });
   }
 
   // Update the cart icon and total span
@@ -44,21 +48,15 @@ function updateCartIconAndTotal() {
   // Update the cart icon and total span
   cartIcon.dataset.total = total.toFixed(2);
   totalSpan.textContent = total.toFixed(2);
-}
 
-// Add event listeners to the cart items
-document.querySelectorAll('.cart-item').forEach((cartItem) => {
-  const removeButton = cartItem.querySelector('.remove');
-  removeButton.addEventListener('click', () => {
-    const productData = cartItem.dataset;
-    removeItemFromCart(productData);
+  // Render the cart items in the cart page
+  const cartItemsElement = document.getElementById('cart-items');
+  cartItemsElement.innerHTML = '';
+  cartItems.forEach((item) => {
+    const cartItemElement = document.createElement('li');
+    cartItemElement.textContent = `${item.product} - $${item.price} x ${item.quantity}`;
+    cartItemsElement.appendChild(cartItemElement);
   });
-});
-
+}
 // Initialize the cart items array
 let cartItems = [];
-
-// Example of adding an item to the cart
-addItemToCart({ product: 'Car', price: 19.99 });
-addItemToCart({ product: 'Toy', price: 29.99 });
-addItemToCart({ product: 'Toy', price: 29.99 });

@@ -92,10 +92,10 @@ header {
 }
 
 .search-form button:hover{
-  background-color: rgb(180, 139, 4);
+  background-color: rgb(205, 158, 3);
 }
 
-.image {
+.imageA {
   margin-top: 10px;
   align-items: center;
   display: flex;
@@ -105,7 +105,7 @@ header {
   object-fit: contain;
 } 
 
-.image:hover{
+.imageA:hover{
   border: 1px solid white;
 }
 
@@ -141,16 +141,7 @@ nav a {
 }
 
 
-.icon-circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px; /* Control circle size */
-  height: 30px;
-  border-radius: 50%; /* Makes it a circle */
-  background-color: #3c3c3c; /* Dark circle background */
-  color: white; /* White icon color for contrast */
-}
+
 
 nav a:hover {
   border: 1px solid white;
@@ -161,64 +152,109 @@ nav ul li.right {
   margin-left: auto; /* Pushes subsequent items to the right */
 }
 /* Main content styling */
-main {
-  padding: 10px;
-}
+/* Global Styles */
 
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
 
-.product {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  width: 200px;
-  text-align: center;
-}
-
-button.add {
-  background-color: #4292e9; /* blue color */
-  color: #ffffff; /* white text color */
-  border: none;
-  padding: 5px 10px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button.add:hover {
-  background-color: #ca941f; /* darker blue color on hover */
-}
-
-button.buy{
-  background-color: #4292e9; /* blue color */
-  color: #ffffff; /* white text color */
-  border: none;
-  padding: 5px 15px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-button.buy:hover{
-  background-color: #ca941f; /* darker blue color on hover */
-}
-
-.product img {
-  max-width: 200px;
-  max-height: 200px;
-  object-fit: contain;
-}
-
-.product img:hover{
-  cursor: pointer;
-  border: 2px solid #4292e9;
   
-}
+  main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Styles */
+  
+  section {
+    margin-bottom: 40px;
+  }
+  
+  section h1, section h2 {
+    margin-top: 0;
+    color: #337ab7;
+  }
+  
+  section p {
+    margin-bottom: 20px;
+  }
+  
+  /* Image Styles */
+  
+  li img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 20px;
+  }
+  
+  /* List Styles */
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-bottom: 20px;
+  }
+  
+  ul li img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 10px;
+  }
+  
+  /* ID-specific Styles */
+  
+  #about-us {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  #our-mission {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 4px solid #337ab7;
+  }
+  
+  #our-history {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  #our-team {
+    background-color: #fff;
+    padding: 20px;
+    border-left: 4px solid #337ab7;
+  }
+  
+  #our-values {
+    background-color: #f7f7f7;
+    padding: 20px;
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 600px) {
+    main {
+      margin: 20px;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 120px;
+      height: 120px;
+    }
+    ul li img {
+      width: 80px;
+      height: 80px;
+    }
+  }
 
 
 /* Footer styling */

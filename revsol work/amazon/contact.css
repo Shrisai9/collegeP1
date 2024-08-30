@@ -1,0 +1,317 @@
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+    background-color: #232f3e; /* Amazon's typical color */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ 
+  .search-form {
+    display: flex;
+    align-items: center;
+    background-color: #f3f3f3;
+    width: 50%;
+  
+    margin: 0%;
+  }
+  
+  .search-form input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    height: 40px;
+    border: 10px;
+    border-radius: 5px;
+  }
+  
+  .search-form button {
+    background-color: rgb(235, 189, 37);
+    border: none;
+    height: 50px;
+    width: 10%;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .search-form button:hover{
+    background-color: rgb(205, 158, 3);
+  }
+
+  .image {
+    
+      height: 20px;
+      margin-top: 20px;
+      align-items: center;
+      display: flex;
+      align-content: center;
+      align-items: center;
+  
+
+  }
+  
+  .logo {
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    margin: 0;
+  }
+  
+  .header-info {
+    padding: 3px;
+    text-align: center;
+  }
+  
+  /* Navigation menu styling */
+  nav {
+    background-color: #232f3e; /* Consistent with your original CSS */
+    padding: 10px;
+    height: 10px;
+  }
+  
+  nav ul {
+    color: white;
+    list-style: none;
+    padding: 0px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav a {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold; /* Consistent with your CSS */
+    margin-bottom: 10px;
+  }
+  
+  nav a:hover {
+    border: 1px solid white;
+  }
+
+  .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Control circle size */
+    height: 30px;
+    border-radius: 50%; /* Makes it a circle */
+    background-color: #3c3c3c; /* Dark circle background */
+    color: white; /* White icon color for contrast */
+  }
+  
+  
+  
+  /* Aligns items on the right in the navbar */
+  nav ul li.right {
+    margin-left: auto; 
+    margin-top: 0 auto;/* Pushes subsequent items to the right */
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-btn {
+    
+    background-color: #3c3c3c;
+    color: #fff;
+  
+  }
+  
+  .dropdown-btn:hover {
+    background-color: #0069d9;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    animation: growDown 500ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+  
+  @keyframes growDown{
+    0% {
+      transform: scaleY(0);
+      }
+    80%{
+      transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+      }
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transition: display 0.5s ease;
+  }
+
+.container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .options {
+    margin-bottom: 20px;
+  }
+  
+  .containers-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .chat-container, .call-container {
+    flex: 1;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .chat-container:last-child {
+    margin-right: 0;
+  }
+  
+  .chat-now, .call-me {
+    background-color: #4292e9;
+    color: #fff;
+    border: none;
+    padding: 10px 10px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .chat-now:hover, .call-me:hover {
+    background-color: #ca941f;
+  }
+  
+  .start-chatting {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .start-chatting:hover {
+    background-color: #0069d9;
+  }
+  
+  h2, h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  i{
+    justify-content: space-around;
+    color: white;
+    size: 10px;
+  }
+
+.chat-now i:hover{
+    color:white;
+}
+
+.call-me i:hover{
+    color: white;
+}
+
+  footer {
+    background-color: #232f3e;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-content {
+    width: calc(100% / 5);
+    margin-bottom: 20px;
+  }
+  
+  .footer-content p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-content li {
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .footer-content a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+  
+  .footer-content a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+  
+  .footer-content i {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  
+  .footer-content i:hover{
+    color: white;
+    text-decoration: underline;
+  }
