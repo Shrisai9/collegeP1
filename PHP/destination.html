@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - TourEase</title>
+    <link rel="stylesheet" href="destination.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TourEase</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="tour.html">Tours</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="destination-list">
+            <h2>Explore Our Destinations</h2>
+            <div class="filters">
+                <input type="text" id="search-box" placeholder="Search destination">
+                <select id="category-filter">
+                    <option value="all">All</option>
+                    <option value="beaches">Beaches</option>
+                    <option value="mountains">Mountains</option>
+                    <option value="cityscapes">Cityscapes</option>
+                </select>
+            </div>
+            <div class="grid" id="destination-grid">
+                <div class="destination-card">
+                    <img src="paris.webp" alt="Paris">
+                    <h3>Paris</h3>
+                    <p>The city of lights awaits you.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="bali.webp" alt="Bali">
+                    <h3>Bali</h3>
+                    <p>Discover tropical paradise.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="tokyo.png" alt="Tokyo">
+                    <h3>Tokyo</h3>
+                    <p>Experience modern wonders.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="kenya.png" alt="Kenya">
+                    <h3>Kenya</h3>
+                    <p>Explore the wild savannahs of Africa.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="new york.jpeg" alt="New York">
+                    <h3>New York</h3>
+                    <p>The city that never sleeps.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="sydney.jpeg" alt="Sydney">
+                    <h3>Sydney</h3>
+                    <p>Marvel at Australia's iconic landmarks.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="grand conyon.jpg" alt="Grand Canyon">
+                    <h3>Grand Canyon</h3>
+                    <p>Witness one of nature's greatest wonders.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="rome.jpeg" alt="Rome">
+                    <h3>Rome</h3>
+                    <p>Discover the ancient history of Rome.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="Swiss_Alps.jpg" alt="Swiss Alps">
+                    <h3>Swiss Alps</h3>
+                    <p>Enjoy breathtaking mountain landscapes.</p>
+                </div>
+                <div class="destination-card">
+                    <img src="dubai.jpg" alt="Dubai">
+                    <h3>Dubai</h3>
+                    <p>Experience the luxury and adventure of Dubai.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 TourEase. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for search functionality -->
+    <script>
+        document.getElementById('search-box').addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase();
+            const destinationCards = document.querySelectorAll('.destination-card');
+
+            destinationCards.forEach(card => {
+                const destinationName = card.querySelector('h3').innerText.toLowerCase();
+                if (destinationName.includes(searchQuery)) {
+                    card.style.display = 'block'; // Show card
+                } else {
+                    card.style.display = 'none'; // Hide card
+                }
+            });
+        });
+    </script>
+</body>
+</html>

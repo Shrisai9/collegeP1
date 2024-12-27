@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Consult Patient</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consultation Details</h1>
+        <form method="POST">
+            <label for="consultation_time">Consultation Time:</label>
+            <input type="number" id="hours" name="hours" min="1" max="12" required> Hours
+            <input type="number" id="minutes" name="minutes" min="0" max="59" required> Minutes
+            <select id="am_pm" name="am_pm">
+                <option value="AM">AM</option>
+                <option value="PM">PM</option>
+            </select>
+
+            <label for="diagnosis">Diagnosis:</label>
+            <textarea id="diagnosis" name="diagnosis" placeholder="Enter Diagnosis" required></textarea>
+
+            <button type="submit">Submit Consultation</button>
+        </form>
+    </div>
+</body>
+</html>

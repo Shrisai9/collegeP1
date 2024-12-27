@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+h1, h2 {
+    color: #5e60ce;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #5e60ce, #56cfe1);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #56cfe1, #72efdd);
+    transform: translateY(-3px);
+}
+
+input, select, textarea {
+    margin: 15px 0;
+    padding: 12px;
+    width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: #f9f9f9;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #5e60ce;
+    background-color: #e0e0e0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+textarea {
+    height: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #5e60ce;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}

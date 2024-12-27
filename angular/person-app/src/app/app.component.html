@@ -1,0 +1,8 @@
+<form (ngSubmit)="addPerson()">
+  <input type="text" [(ngModel)]="newPerson.name" name="name" placeholder="Name" required>
+  <input type="number" [(ngModel)]="newPerson.age" name="age" placeholder="Age" required>
+  <input type="text" [(ngModel)]="newPerson.gender" name="gender" placeholder="Gender" required>
+  <input type="text" [(ngModel)]="newPerson.mobile" name="mobile" placeholder="Mobile" required>
+  <input type="button" (click)="adduser()" title="adduser"/>
+</form>
+<input type="button" (click)="adduser()" title="adduser"/>

@@ -78,7 +78,7 @@ header {
   padding: 5px;
   height: 40px;
   border: 10px;
-  border-radius: 5px;
+  border-radius: 100px;
 }
 
 .search-form button {
